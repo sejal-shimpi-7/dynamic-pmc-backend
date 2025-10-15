@@ -8,6 +8,10 @@ WORKDIR /app
 COPY .mvn/ .mvn
 COPY mvnw pom.xml ./
 
+# --- THIS IS THE NEW LINE THAT FIXES THE ERROR ---
+# Grant execute permission to the mvnw script
+RUN chmod +x ./mvnw
+
 # Download project dependencies
 RUN ./mvnw dependency:go-offline
 
