@@ -21,7 +21,8 @@ public class ProjectImage {
 
     @Column(nullable = false)
     private String imageUrl;
-
+    
+    @Column(columnDefinition = "TEXT")
     private String description;
 
     // Many images belong to One project
