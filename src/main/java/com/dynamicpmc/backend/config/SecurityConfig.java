@@ -34,6 +34,7 @@ public class SecurityConfig {
             .cors(Customizer.withDefaults())
             .csrf(csrf -> csrf.disable())
             .authorizeHttpRequests(auth -> auth
+            	.requestMatchers(HttpMethod.POST, "/api/contact/send").permitAll()
                 // V-- THIS IS THE NEW LINE --V
                 .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll() // Always allow pre-flight requests
                 .requestMatchers(HttpMethod.GET, "/api/**").permitAll()
