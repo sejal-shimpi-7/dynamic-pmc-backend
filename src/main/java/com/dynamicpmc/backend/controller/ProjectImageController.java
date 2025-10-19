@@ -20,6 +20,8 @@ import java.util.List;
 @CrossOrigin(origins = "${app.cors.allowed-origins}")
 //@CrossOrigin
 public class ProjectImageController {
+	
+	
 
     @Autowired
     private ProjectImageService projectImageService;
